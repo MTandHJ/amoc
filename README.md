@@ -10,7 +10,7 @@
 
 ![image-20210110160232303](README.assets/image-20210110160232303.png)
 
-The trained model could in Table could be download [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
+The trained model  in Table could be download [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
 
 ## Requirements
 
@@ -57,19 +57,17 @@ foolbox3.0.4
 
 Pre-train the encoder as follows:
 
-
-
 ```
 python pre_train.py resnet18 cifar10 --moco_type=ACC --leverage=0.5 -T=0.2 -K1=32768 -K2=32768 --moco_mom=0.999 -b=256
 ```
-
-
 
 where moco_type is the option introduced in paper including CCC, CAC, CAA, ACC, ACA, AAC, AAA and ACA_PLUS.
 
 
 
 **Note:**  Ours does not implement the shuffle BN used in MoCo since all experiments are conducted with a single GPU.
+
+
 
 ### Fine-tune
 
@@ -133,7 +131,7 @@ Similarly, if you attack the model of CCC, CAC, CAA, you shall use "--bn_adv"  t
 
 
 
-Evaluate the robustness by unseen attacks based on FoolBox.
+Evaluate the robustness by unseen attacks based on [FoolBox](https://github.com/bethgelab/foolbox).
 
 
 
