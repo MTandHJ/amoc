@@ -80,13 +80,13 @@ StdEv: Fine-tune the model using clean samples.
 Train the linear classifier:
 
 ```
-python linear_at.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=FC --epochs=25
+python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=FC --epochs=25
 ```
 
 or fine-tune the entire model:
 
 ```
-python linear_at.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40
+python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40
 ```
 
 
