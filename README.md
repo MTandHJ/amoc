@@ -4,9 +4,9 @@
 
 [Adversarial Momentum-Contrastive pre-training (AMOC) is a pre-training approach for robust model.](https://arxiv.org/abs/2012.13154)
 
-![image-20210110160200774](C:\Py\moco\README.assets\image-20210110160200774.png)
+![image-20210110160200774](.\README.assets\image-20210110160200774.png)
 
-![image-20210110160232303](C:\Py\moco\README.assets\image-20210110160232303.png)
+![image-20210110160232303](.\README.assets\image-20210110160232303.png)
 
 The trained model could in Table could be download [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
 
