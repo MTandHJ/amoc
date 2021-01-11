@@ -91,7 +91,7 @@ python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp
 
 
 
-**Note:** If you want to fine-tune the pre-trained model of CCC, CAC or CAA, you shall add "--bn_adv" to active the clean BN .
+**Note:** If you want to fine-tune the pre-trained model of CCC, CAC or CAA, you shall add "--bn_adv" to activate the clean BN .
 
 #### StdEv
 
@@ -125,7 +125,7 @@ You could use [AutoAttack](https://github.com/fra31/auto-attack) to evaluate our
 python auto_attack.py resnet18 cifar10 /path/of/model --version=standard --norm=Linf --epsilon=8/255
 ```
 
-Similarly, if you attack the model of CCC, CAC, CAA, you shall use "--bn_adv"  to active the clean BN.
+Similarly, if you attack the model of CCC, CAC, CAA, you shall use "--bn_adv"  to activate the clean BN.
 
 ### Other Attacks
 
