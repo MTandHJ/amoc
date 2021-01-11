@@ -10,7 +10,7 @@
 
 ![image-20210110160232303](README.assets/image-20210110160232303.png)
 
-The trained model  in Table could be download [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
+The trained model  in Table could be downloaded [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
 
 ## Requirements
 
