@@ -86,7 +86,7 @@ python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp
 or fine-tune the entire model:
 
 ```
-python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40
+python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40 --finetune
 ```
 
 
@@ -106,7 +106,7 @@ python linear_std.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp
 or fine-tune the entire model:
 
 ```
-python linear_std.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40
+python linear_std.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40 --finetune
 ```
 
 
