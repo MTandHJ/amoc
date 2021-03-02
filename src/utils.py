@@ -131,7 +131,7 @@ def load_checkpoint(path, model, optimizer, lr_scheduler):
     model.load_state_dict(checkpoint['model'])
     optimizer.load_state_dict(checkpoint['optimizer'])
     lr_scheduler.load_state_dict(checkpoint['lr_scheduler'])
-    epoch = checkpoint['epoch'] + 1 # !
+    epoch = checkpoint['epoch']
     return epoch
 
 def set_seed(seed):
