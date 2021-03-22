@@ -5,6 +5,7 @@
 
 
 import torch
+import torch.nn as nn
 import os
 import sys
 import numpy as np
