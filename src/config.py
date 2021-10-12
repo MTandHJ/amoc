@@ -64,8 +64,8 @@ TRANSFORMS['mix'] = TRANSFORMS['cifar10']
 
 VALIDER = {
     "mnist": (Config(attack_type="pgd-linf", stepsize=0.033333, steps=100), 0.3),
-    "cifar10": (Config(attack_type="pgd-linf", stepsize=0.1, steps=20), 8/255),
-    "cifar100": (Config(attack_type="pgd-linf", stepsize=0.1, steps=20), 8/255)
+    "cifar10": (Config(attack_type="pgd-linf", stepsize=0.25, steps=10), 8/255),
+    "cifar100": (Config(attack_type="pgd-linf", stepsize=0.25, steps=10), 8/255)
 }
 
 # env settings
