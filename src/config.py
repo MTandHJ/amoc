@@ -116,6 +116,15 @@ LEARNING_POLICY = {
         "FC leaning policy will be applied: " \
         "decay the learning rate at 15 and 20 epochs by a factor 10."
     ),
+    "ACL": (
+        "MultiStepLR",
+        Config(
+            milestones=[40, 60],
+            gamma=0.1
+        ),
+        "ACL leaning policy will be applied: " \
+        "decay the learning rate at 40 and 60 epochs by a factor 10."
+    ),
     "AT":(
         "MultiStepLR",
         Config(
