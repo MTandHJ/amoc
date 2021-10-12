@@ -192,6 +192,7 @@ def main(
         if (1 - valid_success) > best_acc_rob:
             coach.save(info_path, "best_paras.pt")
             best_acc_rob = 1 - valid_success
+        print(f"[Test]  TA: {valid_accuracy:.4f}  RA: {1-valid_success:.4f}")
 
         running_loss = coach.adv_train(
             trainloader, attacker,
