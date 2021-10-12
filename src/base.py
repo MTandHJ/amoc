@@ -258,8 +258,8 @@ class LinearCoach:
         self.acc = AverageMeter("Acc.")
         self.progress = ProgressMeter(self.loss, self.acc)
 
-    def save(self, path):
-        torch.save(self.model.state_dict(), path + "/paras.pt")
+    def save(self, path, filename="paras.pt"):
+        torch.save(self.model.state_dict(), os.path.join(path, filename))
 
     
     def train(self, trainlaoder, *, epoch=8888, finetune=False, bn_adv=True):
