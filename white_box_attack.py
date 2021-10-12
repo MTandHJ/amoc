@@ -2,6 +2,7 @@
 
 import torch
 import argparse
+import os
 from src.loadopts import *
 
 
@@ -16,6 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("model", type=str)
 parser.add_argument("dataset", type=str)
 parser.add_argument("info_path", type=str)
+parser.add_argument("--filename", type=str, default="paras.pt")
 parser.add_argument("--bn_adv", action="store_false", default=True)
 parser.add_argument("--attack", type=str, default="pgd-linf")
 parser.add_argument("--epsilon_min", type=float, default=8/255)
@@ -56,7 +58,7 @@ def load_cfg():
     device = gpu(model)
     load( # load the state dict
         model=model, 
-        filename=opts.info_path + "/paras.pt", 
+        filename=os.path.join(opts.info_path, opts.filename),
         device=device, strict=True
     )
 

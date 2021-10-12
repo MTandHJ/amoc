@@ -2,6 +2,7 @@
 
 import torch
 import argparse
+import os
 from src.loadopts import *
 from models.base import AdversarialDefensiveModel
 from autoattack import AutoAttack
@@ -16,6 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("model", type=str)
 parser.add_argument("dataset", type=str)
 parser.add_argument("info_path", type=str)
+parser.add_argument("--filename", type=str, default="paras.pt")
 parser.add_argument("--bn_adv", action="store_false", default=True)
 
 # for AA
@@ -68,7 +70,7 @@ def load_cfg():
     device = gpu(model)
     load( # load the state dict
         model=model, 
-        filename=opts.info_path + "/paras.pt", 
+        filename=os.path.join(opts.info_path, opts.filename),
         device=device, strict=True
     )
 

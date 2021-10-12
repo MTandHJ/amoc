@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import foolbox as fb
 import eagerpy as ep
+import os
 from .utils import AverageMeter, ProgressMeter
 from .criteria import DoubleFalse, LogitsAllFalse
 from .loss_zoo import cross_entropy, kl_divergence
@@ -51,8 +52,8 @@ class Coach:
         self.loss = AverageMeter("Loss")
         self.progress = ProgressMeter(self.loss)
         
-    def save(self, path):
-        torch.save(self.model.encoder_q.state_dict(), path + "/paras.pt")
+    def save(self, path, filename="paras.pt"):
+        torch.save(self.model.encoder_q.state_dict(), os.path.join(path, filename))
 
     def _ccc(self, inputs_q, inputs_k):
         labels = torch.zeros(inputs_q.size(0), dtype=torch.long).to(self.device)

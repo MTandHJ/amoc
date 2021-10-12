@@ -182,11 +182,16 @@ def main(
     info_path
 ):
     from src.utils import save_checkpoint
+    best_acc_rob = 0.
     for epoch in range(start_epoch, opts.epochs):
 
         if epoch % SAVE_FREQ == 0:
             save_checkpoint(info_path, coach.model, coach.optimizer, coach.learning_policy, epoch)
 
+        valid_accuracy, valid_success = valider.evaluate(testloader, bn_adv=opts.bn_adv)
+        if (1 - valid_success) > best_acc_rob:
+            coach.save(info_path, "best_paras.pt")
+            best_acc_rob = 1 - valid_success
 
         running_loss = coach.adv_train(
             trainloader, attacker,
