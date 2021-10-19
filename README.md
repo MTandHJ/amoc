@@ -58,7 +58,7 @@ foolbox3.0.4
 Pre-train the encoder as follows:
 
 ```
-python pre_train.py resnet18 cifar10 --moco_type=ACC --leverage=0.5 -T=0.2 -K1=32768 -K2=32768 --moco_mom=0.999 -b=256
+python pre_train.py resnet18 cifar10 --moco_type=ACA_PLUS --leverage=0.5 -T=0.2 -K1=32768 -K2=32768 --moco_mom=0.999 -b=256
 ```
 
 where moco_type is the option introduced in paper including CCC, CAC, CAA, ACC, ACA, AAC, AAA and ACA_PLUS.
@@ -80,13 +80,13 @@ StdEv: Fine-tune the model using clean samples.
 Train the linear classifier:
 
 ```
-python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=FC --epochs=25
+python linear_trades.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=FC --epochs=25
 ```
 
 or fine-tune the entire model:
 
 ```
-python linear_adv.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=TOTAL --epochs=40 --finetune
+python linear_trades.py resnet18 cifar10 --info_path=/path/of/pre-trained/model -lp=ACL --epochs=100 --finetune
 ```
 
 
