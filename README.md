@@ -8,9 +8,6 @@
 
 ![image-20210110160200774](README.assets/image-20210110160200774.png)
 
-![image-20210110160232303](README.assets/image-20210110160232303.png)
-
-The trained model  in Table could be downloaded [here](https://drive.google.com/file/d/1e2WmUrOXHTuwTcf27I3OpHeB9oz4B4bT/view?usp=sharing).
 
 ## Requirements
 
@@ -28,7 +25,7 @@ foolbox3.0.4
 
 
 ```
-|--data # You could overwrite the ROOT to specify the directory in config.py of src.
+|--data # You could overwrite the ROOT to specify the directory in config.py.
 |--AMOC |-autoattack
 		|-infos	|-LinearAT |-cifar10-resnet18 |-ACC  |-paras.pt
 				|-PreTrain |-cifar10-resnet18 |-ACC  |-paras.pt
