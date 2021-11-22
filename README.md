@@ -51,6 +51,7 @@ foolbox3.0.4
 ### Pre-train
 
 
+**Note:** CIFAR-10 pre-trained models can be downloaded [here](https://drive.google.com/file/d/1BqwWV7EiSW6Jp_WXKU80kGyFtFuzP9XC/view?usp=sharing).
 
 Pre-train the encoder as follows:
 
